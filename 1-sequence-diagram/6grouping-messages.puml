@@ -1,0 +1,51 @@
+@startuml groups
+
+actor User
+participant "Web App" as App
+participant "Auth Service" as Auth
+participant "Payment Gateway" as Payment
+participant "Logger"
+participant "Notifier"
+
+== Authentication ==
+opt Not Logged In
+    User -> App : Request Login
+    App -> Auth : Authenticate User
+    alt Success
+        Auth --> App : Token
+        App -> Logger : Log success
+    else Failure
+        Auth --> App : Invalid Credentials
+        App -> Logger : Log failure
+        App --> User : Login failed
+    end
+end
+
+== Order Process ==
+User -> App : Place Order
+
+par Parallel Tasks
+    App -> Payment : Process Payment
+    App -> Logger : Log Order Request
+end
+
+loop Retry payment
+App -> Payment : Retry payment
+    alt Payment Success
+        App -> Payment : Process Payment
+    else Payment Fails
+        App -> Logger : Log payment error    
+    end
+end
+
+critical Confirm Order
+    App -> Payment : Final Confirmation
+    Payment --> App : Confirmed
+end
+
+group Post-Order Actions
+    App -> Notifier : Send Email
+    App -> Logger : Log Order Complete
+end
+
+@enduml

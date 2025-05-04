@@ -1,0 +1,31 @@
+@startuml class
+class User {
+    - id: int
+    - name: String
+    - email: String
+    + register(): void
+    + login(): boolean
+}
+class Product {
+    - id: int
+    - name: String
+    - price: double
+    + displayInfo(): void
+}
+class Order {
+    - orderId: int
+    - orderDate: Date
+    - totalAmount: double
+    + calculateTotal(): double
+    + generateInvoice(): void
+}
+class Payment {
+    - paymentId: int
+    - amount: double
+    - method: String
+    + processPayment(): boolean
+}
+User --> Order : places
+Order --> Product : contains
+Order --> Payment : uses
+@enduml

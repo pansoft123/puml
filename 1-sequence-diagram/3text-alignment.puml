@@ -1,0 +1,14 @@
+@startuml text-alignment
+skinparam sequenceMessageAlign right
+
+participant Client
+participant Server
+participant Database
+
+Client -> Server : Send Request
+Server -> Database : Query Data
+Database -> Server : Return Data
+Server -> Client : Send Response
+
+Client -> Server : Acknowledge Response
+@enduml

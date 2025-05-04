@@ -1,0 +1,22 @@
+@startuml title-header-footer
+
+header "Page Header"
+footer "Page %page% of %lastpage%"
+
+title Example Sequence Diagram
+
+actor Customer
+participant WebServer
+participant Database
+
+Customer -> WebServer : Request Data
+WebServer -> Database : Query Data
+Database -> WebServer : Return Data
+WebServer -> Customer : Send Response
+
+note right of WebServer
+    This note provides
+    additional context.
+end note
+
+@enduml

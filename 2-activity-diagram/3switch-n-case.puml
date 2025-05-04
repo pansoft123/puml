@@ -1,0 +1,44 @@
+@startuml switch-case
+start
+:Select payment method;
+
+partition PaymentMethodSwitch {
+  switch (paymentMethod)
+  case (Credit Card)
+    :Process via Credit Card Gateway;
+  case (UPI)
+    :Process via UPI Gateway;
+  case (Net Banking)
+    :Redirect to Bank Portal;
+  case (Cash on Delivery)
+    :Show COD Confirmation;
+    :Show Invalid Payment Method;
+  endswitch
+}
+
+stop
+@enduml
+
+
+/'
+@startuml switch-case-simple
+start
+
+:Select payment method;
+
+switch (paymentMethod)
+case (Credit Card)
+    :Process via Credit Card Gateway;
+case (UPI)
+    :Process via UPI Gateway;
+case (Net Banking)
+    :Redirect to Bank Portal;
+case (Cash on Delivery)
+    :Show COD Confirmation;
+case (Other)
+    :Show Invalid Payment Method;
+endswitch
+
+stop
+@enduml
+'/

@@ -1,0 +1,30 @@
+// Design works only in live editor https://www.mermaidchart.com/play
+---
+config:
+  kanban:
+    ticketBaseUrl: 'https://yourprojecttracker.com/task/#TICKET#'
+---
+
+kanban
+  Backlog
+    [Conduct Competitor Analysis]
+    task1[Create SEO Strategy]@{ assigned: 'A.Shah', priority: 'Medium' }
+
+  Design
+    task2[Wireframe Homepage]@{ ticket: WR-1001, assigned: 'J.Mehta', priority: 'High' }
+    task3[Design Mobile Layouts]@{ ticket: WR-1002, priority: 'Medium' }
+
+  Development
+    task4[Implement Responsive Header]@{ ticket: WR-1003, assigned: 'R.Patel' }
+    task5[Set up CI/CD Pipeline]
+
+  Testing
+    task6[Cross-browser Testing]@{ ticket: WR-1004, assigned: 'QA Team', priority: 'High' }
+    task7[Performance Benchmarking]
+
+  Completed
+    task8[Setup Dev Environment]
+    task9[Initial Project Kickoff]@{ ticket: WR-1000, priority: 'Low' }
+
+  Blocked
+    task10[Third-party API Integration]@{ ticket: WR-1010, priority: 'High', assigned: 'R.Patel' }

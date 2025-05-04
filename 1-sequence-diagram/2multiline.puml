@@ -1,0 +1,9 @@
+@startuml multiline
+participant Server [
+    =Main Server
+    ----
+    Handles Requests
+]
+participant Client
+Server -> Client : Send Data
+@enduml

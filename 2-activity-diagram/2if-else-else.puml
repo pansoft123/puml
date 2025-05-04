@@ -1,0 +1,19 @@
+@startuml if-else-if
+!pragma useVerticalIf on
+start
+
+if (Is user logged in?) then (yes)
+    :Show dashboard;
+elseif (Is user a guest?) then (yes)
+    :Show guest homepage;
+    stop
+    (no) elseif (Is user an admin?) then (yes)
+    :Show admin panel;
+    (no) elseif (Is user banned?) then (yes)
+    :Show banned message;
+else (no)
+    :Show login page;
+endif
+
+stop
+@enduml

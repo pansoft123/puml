@@ -1,0 +1,69 @@
+@startuml with-style
+<style>
+' Style for the overall activity diagram
+activityDiagram {
+  BackgroundColor #1C1C1C     
+  BorderColor #444     
+  FontColor #FFFFFF
+  FontName "Segoe UI"
+
+'   Style for decision diamonds
+  diamond {
+    BackgroundColor LightSkyBlue
+    LineColor DodgerBlue
+    FontColor Navy
+    FontSize 14
+  }
+
+'   Style for arrows (transitions)
+  arrow {
+    FontColor Orange
+    FontSize 13
+    LineColor Blue    
+  }
+
+'   Style for partitions (grouped actions)
+  partition {
+    BackgroundColor Lavender
+    LineColor Indigo
+    FontColor DarkSlateBlue
+    RoundCorner 15
+  }
+
+'   Style for notes
+  note {
+    FontColor Black
+    LineColor DarkGreen
+    BackgroundColor LightYellow
+  }
+}
+
+' Optional: Set background for document
+document {
+  BackgroundColor transparent
+}
+</style>
+
+start
+:Initialize system;
+
+if (user authenticated?) then (yes)
+  :Show dashboard;
+else
+  :Redirect to login;
+  note right: User must log in to continue
+endif
+
+partition "Data Operations" {
+  :Fetch data;
+  :Process data;
+  if (data valid?) then
+    :Display results;
+  else
+    :Show error message;
+  endif
+}
+
+-> End of workflow;
+stop
+@enduml

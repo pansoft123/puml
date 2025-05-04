@@ -1,0 +1,30 @@
+@startwbs wbs
+* Website Development WBS
+** Project Initiation
+*** Define project scope
+*** Identify stakeholders
+*** Prepare project charter
+** Planning Phase
+*** Create project plan
+*** Develop risk management plan
+*** Define roles and responsibilities
+** Design Phase
+*** Create wireframes
+*** Approve UI/UX design
+*** Define site structure
+** Development Phase
+*** Frontend development
+**** HTML/CSS templates
+**** JavaScript functionality
+*** Backend development
+**** Database design
+**** API development
+** Testing Phase
+*** Functional testing
+*** Performance testing
+*** User acceptance testing (UAT)
+** Deployment & Maintenance
+*** Launch website
+*** Monitor performance
+*** Provide ongoing support
+@endwbs

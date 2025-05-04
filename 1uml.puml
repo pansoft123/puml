@@ -1,0 +1,18 @@
+@startuml ankush
+skinparam backgroundColor #0F2027
+skinparam titleFontSize 72
+skinparam titleFontColor White
+skinparam titleFontName Impact
+skinparam shadowing true
+
+title
+<UML>
+Unified Modeling Language
+end title
+
+skinparam footerFontColor White
+skinparam footerFontSize 24
+skinparam footerFontName Courier New
+footer Presented by Ankush Wankar
+
+@enduml

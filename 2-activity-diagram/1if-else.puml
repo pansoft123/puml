@@ -1,0 +1,10 @@
+@startuml if-else
+start
+if (User logged in?) then (<color:green>yes)
+    :Show Dashboard;
+else (<color:red>no)
+    :Redirect to Login page;
+endif
+stop
+@enduml
+

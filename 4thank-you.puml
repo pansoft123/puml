@@ -1,0 +1,16 @@
+@startuml ankush
+skinparam backgroundColor #0F2027
+skinparam titleFontSize 72
+skinparam titleFontColor White
+skinparam titleFontName Impact
+skinparam shadowing true
+
+title
+Thank You
+end title
+
+skinparam footerFontColor White
+skinparam footerFontSize 24
+skinparam footerFontName Courier New
+
+@enduml

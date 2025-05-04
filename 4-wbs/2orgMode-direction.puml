@@ -1,0 +1,23 @@
+@startwbs direction
+* Mobile App Development WBS
+** Project Setup
+*** Define Requirements
+*** Set Up Development Environment
+** UI/UX Design
+*** Create Wireframes
+****< Sketch Initial Layouts
+****> Review with Stakeholders
+***< Finalize Design Mockups
+***< Approve UI Guidelines
+** App Development
+*** Frontend Implementation
+****< Build UI Components
+****> Integrate Navigation
+*** Backend Integration
+****< Set Up Database
+****> Develop REST APIs
+** Testing & Launch
+*** Perform Unit Testing
+***< Conduct Beta Testing
+***> Launch App on Stores
+@endwbs

@@ -1,0 +1,18 @@
+@startuml arrow-style
+actor User
+participant WebApp
+participant Database
+
+User ->x WebApp : Terminate Session
+User -> WebApp : Login Request
+User ->> WebApp : Submit Form
+User -\ WebApp : Download File
+User \\- WebApp : Upload File
+User //-- WebApp : Delete Account
+
+User ->o WebApp : Logout
+User o\\-- WebApp : Cancel Subscription
+
+User <-> WebApp : Real-time Chat
+User <->o WebApp : Notification Acknowledgement
+@enduml

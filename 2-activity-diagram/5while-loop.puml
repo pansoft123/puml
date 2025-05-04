@@ -1,0 +1,21 @@
+@startuml while
+start
+
+:Initialize attempt = 1;
+
+while (attempt ≤ 3?) is (yes)
+    :Try sending email;
+    if (Email sent?) then (yes)
+        :Log success;
+        break
+        else (no)
+            :Increment attempt;
+        endif
+        endwhile (no)
+
+        if (attempt > 3?) then (yes)
+            :Log failure;
+        endif
+
+        stop
+        @enduml

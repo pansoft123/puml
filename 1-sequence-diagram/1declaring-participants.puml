@@ -1,0 +1,21 @@
+@startuml participant
+actor       User        as user
+boundary    WebUI       as ui
+control     Controller  as controller
+entity      Order       as order
+database    OrderDB     as db
+collections OrderCache  as cache
+queue       OrderQueue  as queue
+participant NotificationService as notifier
+
+user -> ui : Places Order
+ui -> controller : Sends Order Request
+controller -> order : Create Order Object
+order -> db : Save Order
+db --> order : Order ID
+order -> cache : Store in Cache
+controller -> queue : Publish Order Event
+queue -> notifier : Notify User
+notifier --> user : Confirmation
+
+@enduml

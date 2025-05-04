@@ -1,0 +1,8 @@
+@startuml repeat
+start
+repeat
+    :data;
+    :Append to file;
+repeat while (data?) is (Append to file)
+stop
+@enduml

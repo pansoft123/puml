@@ -1,0 +1,17 @@
+@startgantt gantt
+Project starts the 2024-06-01
+
+[Planning] requires 5 days
+[Design] requires 4 days
+[Development] requires 10 days
+[Testing] requires 5 days
+[Deployment] requires 2 days
+
+[Design] starts at [Planning]'s end
+[Development] starts at [Design]'s end
+[Testing] starts at [Development]'s end
+[Deployment] starts at [Testing]'s end
+
+-- Milestone --
+[Release] happens at [Deployment]'s end
+@endgantt
