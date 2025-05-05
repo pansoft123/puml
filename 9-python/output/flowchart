@@ -1,0 +1,12 @@
+// Sample Diagram
+digraph {
+	A [label=Start]
+	B [label="Process Data"]
+	C [label=Decision]
+	D [label="Send Report"]
+	E [label=End]
+	A -> B
+	B -> C
+	C -> D [label=Yes]
+	C -> E [label=No]
+}
